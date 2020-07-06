@@ -8,18 +8,14 @@ api = Api(app)
 
 
 class SentimentAnalysis(Resource):
-    # def get(self, phrase):
-    #     sentiment = int(str(deriveSentiment(phrase)))
-    #
-    #     return {'Sentiment': sentiment}
+    def get(self, phrase):
+        sentiment = int(str(deriveSentiment(phrase)))
 
-    def get(self):
-
-        return {'Sentiment': "Good"}
+        return {'Sentiment': sentiment}
 
 
-#api.add_resource(SentimentAnalysis, '/analyze/<string:phrase>')
-api.add_resource(SentimentAnalysis, '/')
+api.add_resource(SentimentAnalysis, '/analyze/<string:phrase>')
+#api.add_resource(SentimentAnalysis, '/')
 
 if __name__ == '__main__':
     app.run(debug=True)
