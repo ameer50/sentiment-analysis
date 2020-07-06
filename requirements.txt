@@ -13,4 +13,3 @@ nltk==3.4.5
 jsonschema==3.2.0
 Flask==1.1.2
 Flask-RESTful==0.3.8
-conda==4.8.3
