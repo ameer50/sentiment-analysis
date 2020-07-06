@@ -7,7 +7,7 @@ app = Flask(__name__)
 api = Api(app)
 
 
-class app(Resource):
+class SentimentAnalysis(Resource):
     def get(self, phrase):
         sentiment = int(str(deriveSentiment(phrase)))
 
